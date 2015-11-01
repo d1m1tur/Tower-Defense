@@ -21,7 +21,5 @@ void TILE::LoadTile(int x, int y, int prop, int xImg)
 
 void TILE::DrawTile(SDL_Renderer* Rend, SDL_Texture* TileTemp)
 {
-    Game Object;
-
-    Object.Draw(Rend, TileTemp, xCoord, yCoord, TILE_WIDTH, TILE_HEIGHT, tileSetCoord, 0, TILE_WIDTH, TILE_HEIGHT, SDL_FLIP_NONE);
+    Game::Draw(Rend, TileTemp, xCoord, yCoord, TILE_WIDTH, TILE_HEIGHT, tileSetCoord, 0, TILE_WIDTH, TILE_HEIGHT, SDL_FLIP_NONE);
 }

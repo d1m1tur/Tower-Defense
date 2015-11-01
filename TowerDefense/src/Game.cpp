@@ -21,6 +21,7 @@ int Game::OnExecute()
 
     if(OnInit() == false)
     {
+        Sleep(1000);
         return -1;
     }
 
@@ -44,8 +45,6 @@ int Game::OnExecute()
         OnRender();
         cout<<"Render phase End\n"<<endl;
 
-
-
         system("cls");
     }
 
@@ -58,6 +57,10 @@ int Game::OnExecute()
 
 int main(int argc, char* argv[])
 {
+    cout<<argv[0]<<endl;
+
+    Sleep(1000);
+
     Game theGame;
 
     return theGame.OnExecute();

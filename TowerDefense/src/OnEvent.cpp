@@ -86,7 +86,7 @@ void Game::OnEvent(SDL_Event* Event)
     {
         if(Event->button.button == SDL_BUTTON_LEFT)
         {
-
+            LeftButtonPressed = true;
         }
 
         if(Event->button.button == SDL_BUTTON_RIGHT)

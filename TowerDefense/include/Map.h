@@ -15,18 +15,21 @@ class Map
 
         ifstream loadMap;
 
+        bool building;
+
         TILE* hoverTile;
 
         TILE tile_map[MAP_X][MAP_Y];
 
         SDL_Texture* Tileset_Image;
-        int hoverImage;
+        SDL_Texture* BuildMenu_Image;
+        SDL_Texture* Hover_Image;
 
         bool LoadTileSet();
         void RenderMap(SDL_Renderer* Rend);
         TILE* GetHoverTile();
-        bool OnHover();
-        void BuildTower();
+        bool OnHover(SDL_Renderer* Rend);
+        bool BuildTower(SDL_Renderer* Rend);
 
     protected:
     private:

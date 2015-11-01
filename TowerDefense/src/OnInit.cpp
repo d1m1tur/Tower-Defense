@@ -24,6 +24,7 @@ bool Game::OnInit()
 
     if((Icon = IMG_Load("./Resources/Images/favicon.png")) == NULL)
     {
+        cout<<"Icon not loaded"<<endl;
         return false;
     }
 
@@ -32,6 +33,12 @@ bool Game::OnInit()
     // Creating Renderer
     Renderer = SDL_CreateRenderer(Window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
+    //Check Renderer
+    if(Renderer == NULL)
+    {
+        cout << SDL_GetError() << endl;
+        return false;
+    }
 
     //Creating Entities
 
@@ -45,21 +52,11 @@ bool Game::OnInit()
         return false;
     }
 
-    //Check Renderer
-    if(Renderer == NULL)
-    {
-        cout << SDL_GetError() << endl;
-        return false;
-    }
-
     //Load Images
 
-    Map1.Tileset_Image = OnLoad(Renderer, "./Resources/Images/tileset.png");
-
-    Map1.loadMap.open("./Resources/Maps/map1.txt");
-
-    if(Map1.LoadTileSet() == false)
+    if(LoadContent() == false)
     {
+        cout<<"Load content failed"<<endl;
         return false;
     }
 

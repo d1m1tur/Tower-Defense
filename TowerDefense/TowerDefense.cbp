@@ -34,6 +34,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Enemies.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Includes.h" />
@@ -41,9 +42,11 @@
 		<Unit filename="include/OnAnimate.h" />
 		<Unit filename="include/TILE.h" />
 		<Unit filename="src/Cleanup.cpp" />
+		<Unit filename="src/Enemies.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/FPS.cpp" />
 		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/LoadContent.cpp" />
 		<Unit filename="src/Map.cpp" />
 		<Unit filename="src/OnAnimate.cpp" />
 		<Unit filename="src/OnEvent.cpp" />

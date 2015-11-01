@@ -2,14 +2,19 @@
 
 void Game::OnLoop()
 {
+    //Gets the start ticks
     OnStartup();
 
-    //Cursor
-
+    //Set default cursor every frame
     SDL_SetCursor(SDL_GetDefaultCursor());
 
-    Map1.OnHover();
 
+    if(LeftButtonPressed == true)
+    {
+        Map1.building = true;
+    }
+
+    //Caps the frame rate depending on the ticks that have past
     FrameRate(FPS);
 }
 

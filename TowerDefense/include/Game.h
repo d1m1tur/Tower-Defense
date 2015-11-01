@@ -41,16 +41,16 @@ class Game
 
         //Graphics functions
 
-        bool Draw(SDL_Renderer* Rend,
+        static bool Draw(SDL_Renderer* Rend,
                   SDL_Texture* Temp,
                   int x, int y, int w, int h,
                   SDL_RendererFlip Flip);
-        bool Draw(SDL_Renderer* Rend,
+        static bool Draw(SDL_Renderer* Rend,
                   SDL_Texture* Temp,
                   int x, int y, int w, int h,
                   int x2, int y2, int w2, int h2,
                   SDL_RendererFlip Flip);
-        SDL_Texture* OnLoad(SDL_Renderer* Rend, char* FILE );
+        static SDL_Texture* OnLoad(SDL_Renderer* Rend, char* FILE );
 
         //Other functions
 
@@ -70,6 +70,9 @@ class Game
         bool MouseDragReset(Entity *object);
         bool LeftButtonPressed;
         bool dragOne;
+
+        int HoveredTower();
+        void Builder();
 
         void MakeResponsive();
 };
